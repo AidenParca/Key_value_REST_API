@@ -1,0 +1,17 @@
+#responsible for creating volumes and networks
+source .env.volume
+source .env.network
+
+if [ "$(docker volume ls -q -f name=$VOLUME_NAME)" ]; then
+    echo "A volume with the name $VOLUME_NAME already exists,Skipping the creation"
+else 
+    docker volume create $VOLUME_NAME
+    echo "volume created"
+fi
+
+if [ "$(docker network ls -q -f name=$NETWORK_NAME)" ]; then
+    echo "A network with the name $NETWORK_NAME already exists,Skipping the creation"
+else 
+    docker network create $NETWORK_NAME
+    echo "network created"
+fi
