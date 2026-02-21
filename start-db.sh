@@ -9,9 +9,6 @@ source setup.sh
 ROOT_USER="root-user"
 ROOT_PASSWORD="root-password"
 
-KEY_VALUE_DB='key-value-db'
-KEY_VALUE_USER='key-value-user'
-KEY_VALUE_PASSWORD='key-value-password'
 
 LOCALHOST_PORT=27017
 CONTAINER_PORT=27017
